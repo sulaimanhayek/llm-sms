@@ -50,6 +50,15 @@ Type `<phone>: <message>`, for example `07701234567: hi`. Each reply shows its S
 
 On a Twilio trial account you can only text numbers you have verified, and every reply starts with "Sent from your Twilio trial account", which uses up part of the length.
 
+## Tests
+
+```bash
+pip install -r requirements-dev.txt
+pytest
+```
+
+The tests need no API key or Twilio account: a fake stands in for the Claude API behind the real SDK, so they check the exact request that would be sent. They also run on GitHub for every push and pull request.
+
 ## Known issue: Iraq
 
 Twilio has no Iraqi numbers and no two-way SMS in Iraq. With a UK/US number, people in Iraq pay international SMS rates to text it, and Iraqi carriers may not deliver the replies (Asiacell blocks unregistered international senders).
