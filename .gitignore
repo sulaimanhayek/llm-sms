@@ -1,0 +1,15 @@
+# Secrets
+.env
+
+# User data: phone numbers, names, conversations
+users.json
+users.json.tmp
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# macOS
+.DS_Store
